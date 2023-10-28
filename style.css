@@ -1,0 +1,244 @@
+/* 
+FRONT-END STYLE GUIDE
+
+--- 01 TYPOGRAPHY SYSTEM
+
+--Fonts
+
+- Family: [Inter](https://fonts.google.com/specimen/Inter)
+- Weights: 400, 700
+
+- Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+- Weights: 400
+
+
+--Font size
+
+- Font size: 15px
+
+
+--- 02 COLORS
+
+--Primary
+
+- Very dark blue (main background): hsl(233, 47%, 7%)
+- Dark desaturated blue (card background): hsl(244, 38%, 16%)
+- Soft violet (accent): hsl(277, 64%, 61%)
+
+
+--Neautral
+
+- White (main heading, stats): hsl(0, 0%, 100%)
+- Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+- Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+
+--- 03 LAYOUT
+
+The designs were created to the following width:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+*/
+
+/* //////////////////////////////////////////////////////////// */
+/*    GLOBAL RESET START                                         /
+/* //////////////////////////////////////////////////////////// */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+    line-height: 1.1;
+}
+
+
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+    color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+    min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+    scroll-margin-block: 5ex;
+}
+
+/* //////////////////////////////////////////////////////////// */
+/*   GLOBAL RESET END                                         */
+/* //////////////////////////////////////////////////////////// */
+
+/* font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif; */
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container {
+    background-color: hsl(244, 38%, 16%);
+    display: flex;
+    max-width: 69.375rem;
+    border-radius: 10px;
+    margin: 2rem 2rem;
+    overflow: hidden;
+    /* align-items: center; */
+    justify-content: center;
+
+}
+
+.img-container {
+    position: relative;
+    min-width: 34rem;
+    min-height: 100%;
+    order: 1;
+
+
+}
+
+.gradient {
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    background-color: hsla(277, 64%, 61%, 0.486);
+
+}
+
+.img {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+
+
+}
+
+.content-container {
+    padding: 4.5rem 4.5rem 3.68rem 4.5rem;
+
+
+}
+
+.stat-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-container {
+    display: flex;
+    gap: 3.6rem;
+}
+
+/* ///////////////////////////// */
+.heading,
+.numbers {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+.heading {
+    margin-bottom: 1.5625rem;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+}
+
+.description {
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsla(0, 0%, 100%, 0.6);
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
+.text {
+    color: hsla(0, 0%, 100%, 0.75);
+    margin-bottom: 4.5rem;
+    font-size: 0.9375rem;
+    padding-right: 2.4rem;
+
+}
+
+.accent {
+    color: hsl(277, 64%, 61%);
+}
+
+.text,
+.description {
+    line-height: 1.5625rem;
+}
+
+.numbers {
+    font-size: 1.5rem;
+}
